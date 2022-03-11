@@ -1,0 +1,9 @@
+# Very simple example of cloud formation
+# This will just create an EC2 instance (without SG)
+Resources:
+  MyInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      AvailabilityZone: "ap-southeast-2a"
+      ImageId: "ami-02af4b27cfc41bd6f"
+      InstanceType: "t2.micro"
