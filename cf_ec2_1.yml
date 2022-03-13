@@ -1,4 +1,4 @@
-# Very simple example of cloud formation
+# Very simple example of cloud formation with just Resources section
 # This will just create an EC2 instance (without SG)
 Resources:
   MyInstance:

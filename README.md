@@ -10,10 +10,19 @@
 # Tutorials
 https://www.youtube.com/watch?v=WlPokWf4VoM
 
+# Sample Templates
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-sample-templates.html
+
 # Cloud Formation
 https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html
 https://github.com/stacksimplify/aws-cloudformation-simplified
 https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/GettingStarted.Walkthrough.html
+
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-guide.html
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html
+
 
 https://www.youtube.com/watch?v=aR_XZIM1c58
 
