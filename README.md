@@ -1,3 +1,6 @@
+# To Do
+Create each resource under Resources in EC2 Dashboard using template one step at a time 
+
 # Common things in the template
 1. Mappings
 2. Parameters

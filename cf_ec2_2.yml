@@ -2,18 +2,37 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: |
   Simple example which creates EC2 instance with parameters 
   from the user in the create stack wizard
+  It also create a new security group and assigns to EC2 instance
+  from which you can visit default web page - index.html - by just hitting 
+  the http://EC2_instance_ip_address
 Parameters:
   HelloName:
     Description: Name to say Hello to in the web page
     Type: String
     Default: Guest
 Resources:
+  WebSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: "Enable HTTP and SSH access" # Required
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0 # from any ip for testing purpose now
+      
   EC2Instance:
     Type: AWS::EC2::Instance
     Properties:
       AvailabilityZone: "ap-southeast-2a"
       ImageId: "ami-0646b10ec20a40c81"
       InstanceType: "t2.micro"
+      SecurityGroups: 
+        - !Ref WebSecurityGroup
       UserData: 
         Fn::Base64: !Sub |
           #!/bin/bash
